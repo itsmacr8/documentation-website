@@ -22,12 +22,16 @@ const Index = () => <Layout
     lnkey={'bjoernbuettner'}
     label={'Björn Büttner'}
   />
+  <ContentUnit
+    level={'h2'}
+    text={'sponsors.former.title'}
+  >sponsors.former.description</ContentUnit>
   <Sponsor
     img={<img
       src={jungwild}
       alt={'JUNGWILD'}
     />}
-    to={'https://bjoern-buettner.me'}
+    to={'https://jungwild.io'}
     lnkey={'jungwild'}
     label={'JUNGWILD'}
   />
