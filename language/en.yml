@@ -138,6 +138,9 @@ sponsors:
     title: "Sponsors | Contributing"
     description: "The following businesses and companies are sponsoring the development of api-bench by providing time, money or necessary tools."
   title: "Sponsors"
+  former:
+    title: "Former Sponsors"
+    description: "These companies are former sponsors and have helped in the past."
   description: "The following businesses and companies support the development of @idrinth-api-bench/framework. This means they provide time, money or necessary tools for the development."
   bjoernbuettner:
     intro: "Björn Büttner is a Germany based business, that provides custom development and hosting services in a web context. Additionally to that some training and consulting are offered, that do include this project for performance monitoring."
