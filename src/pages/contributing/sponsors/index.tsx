@@ -21,6 +21,7 @@ const Index = () => <Layout
     to={'https://bjoern-buettner.me'}
     lnkey={'bjoernbuettner'}
     label={'Björn Büttner'}
+    since={new Date('2022-04-01')}
   />
   <ContentUnit
     level={'h2'}
@@ -34,6 +35,8 @@ const Index = () => <Layout
     to={'https://jungwild.io'}
     lnkey={'jungwild'}
     label={'JUNGWILD'}
+    since={new Date('2023-11-15')}
+    until={new Date('2024-11-30')}
   />
 </Layout>;
 export default Index;
