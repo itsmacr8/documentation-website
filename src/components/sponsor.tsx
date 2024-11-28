@@ -33,7 +33,7 @@ const Sponsor = ({
             nofollow={true}
           />
         </h2>
-        <p>${ since.toLocaleDateString() } - ${ until.toLocaleDateString() }</p>
+        <p>{ since.toLocaleDateString() } - { until.toLocaleDateString() }</p>
         <p><Lang lnkey={`sponsors.${ lnkey }.intro` as languageKey}/></p>
         <p><Lang lnkey={`sponsors.${ lnkey }.sponsoring` as languageKey}/></p>
       </div>
@@ -48,7 +48,7 @@ const Sponsor = ({
           label={label}
         />
       </h2>
-      <p>${ since.toLocaleDateString() } - <Lang lnkey={'sponsors.now'}/></p>
+      <p>{ since.toLocaleDateString() } - <Lang lnkey={'sponsors.now'}/></p>
       <p><Lang lnkey={`sponsors.${ lnkey }.intro` as languageKey}/></p>
       <p><Lang lnkey={`sponsors.${ lnkey }.sponsoring` as languageKey}/></p>
     </div>
