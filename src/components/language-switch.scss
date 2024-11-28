@@ -1,4 +1,6 @@
 select.language-switch {
   appearance: auto;
   cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }

@@ -10,6 +10,8 @@ interface SponsorProps {
   lnkey: string;
   to: string;
   label: string;
+  since: Date;
+  until?: Date;
 }
 
 const Sponsor = ({
@@ -17,18 +19,40 @@ const Sponsor = ({
   lnkey,
   to,
   label,
-}: SponsorProps,) => <div className={'card sponsor'}>
-  {img}
-  <div key={lnkey}>
-    <h2>
-      <ExternalLink
-        to={to}
-        label={label}
-      />
-    </h2>
-    <p><Lang lnkey={`sponsors.${ lnkey }.intro` as languageKey}/></p>
-    <p><Lang lnkey={`sponsors.${ lnkey }.sponsoring` as languageKey}/></p>
-  </div>
-</div>;
+  since,
+  until
+}: SponsorProps,) => {
+  if (until) {
+    return <div className={'card sponsor former'}>
+      {img}
+      <div key={lnkey}>
+        <h2>
+          <ExternalLink
+            to={to}
+            label={label}
+            nofollow={true}
+          />
+        </h2>
+        <p>${ since.toLocaleDateString() } - ${ until.toLocaleDateString() }</p>
+        <p><Lang lnkey={`sponsors.${ lnkey }.intro` as languageKey}/></p>
+        <p><Lang lnkey={`sponsors.${ lnkey }.sponsoring` as languageKey}/></p>
+      </div>
+    </div>;
+  }
+  return <div className={'card sponsor current'}>
+    {img}
+    <div key={lnkey}>
+      <h2>
+        <ExternalLink
+          to={to}
+          label={label}
+        />
+      </h2>
+      <p>${ since.toLocaleDateString() } - <Lang lnkey={'sponsors.now'}/></p>
+      <p><Lang lnkey={`sponsors.${ lnkey }.intro` as languageKey}/></p>
+      <p><Lang lnkey={`sponsors.${ lnkey }.sponsoring` as languageKey}/></p>
+    </div>
+  </div>;
+}
 
 export default Sponsor;
